@@ -23,7 +23,7 @@ app.get('ui/main.js', function (req, res) {
 
 var counter= 0;
 app.get('/counter', function(req,res){
-    res.send(counter++.toString());
+    res.send(counter.toString());
 })
 
 app.get('/article-three', function (req, res) {
