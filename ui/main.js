@@ -14,14 +14,6 @@ button.onclick= function()
             }
         }
     };
-    
-    
-    
-    
-    
-    
-    
-    
 request.open('GET', "http://arindammaitra97a81.imad.hasura-app.io/counter", true);
 request.send(null);
 };
