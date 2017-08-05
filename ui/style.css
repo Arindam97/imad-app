@@ -19,4 +19,23 @@ body {
 .img-medium {
     height: 200px;
 }
-
+.contain
+            {
+                max-width:1000px;
+                margin:0 auto;
+                color: #eeedf3;
+                font-family:sans-sherif;
+                padding-top: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+            .container
+            {
+                max-width:1000px;
+                margin:0 auto;
+                color: #eeedf3;
+                font-family:sans-sherif;
+                padding-top: 20px;
+                padding-left: 20px;
+                padding-right: 20px;
+            }
