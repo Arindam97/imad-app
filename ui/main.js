@@ -31,4 +31,4 @@ submit.onclck= function()
     }
 var ul=document.getElementById('namelist');
 ul.innerHTML=list;
-}
+};
