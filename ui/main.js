@@ -18,7 +18,7 @@ request.open('GET', 'http://arindammaitra97a81.imad.hasura-app.io/counter', true
 request.send(null);
 };
 
-var nameIn= document.getElementById('name');
+var nameIn= document.getElementById('nameID');
 var name=nameIn.value;
 var submit= document.getElementById('submit_btn');
 submit.onclck= function()
