@@ -42,8 +42,6 @@ submit.onclick= function()
             }
         }
     };
-var nameIn= document.getElementById('nameID');
-var name=nameIn.value;
 request.open('GET', 'http://arindammaitra97a81.imad.hasura-app.io/submit-name?name='+name, true);
 request.send(null);
 };
