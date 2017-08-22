@@ -22,6 +22,10 @@ app.get("/submit-name", function(req, res){
    res.send(JSON.stringify(names));
 });
 
+app.get('/test-db', function(req, res){
+    
+});
+
  var   articles= {
     'article-one': {
         title: 'Black Holes | Arindam',
