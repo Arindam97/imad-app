@@ -10,9 +10,9 @@ app.get('/', function (req, res) {
 });
 
 var articleOne={
-    title: 'Black Holes | Arindam';
-    heading: 'Black Holes';
-    date: 'August,5 2017';
+    title: 'Black Holes | Arindam',
+    heading: 'Black Holes',
+    date: 'August,5 2017',
     content: `<p>
                 A <i><b>black hole</b></i> is a region of spacetime exhibiting such strong gravitational effects that nothing—not even particles and electromagnetic radiation such as light—can escape from inside it.The theory of general relativity predicts that a sufficiently compact mass can deform spacetime to form a black hole.The boundary of the region from which no escape is possible is called the event horizon. Although the event horizon has an enormous effect on the fate and circumstances of an object crossing it, no locally detectable features appear to be observed. In many ways a black hole acts like an ideal black body, as it reflects no light.Moreover, quantum field theory in curved spacetime predicts that event horizons emit Hawking radiation, with the same spectrum as a black body of a temperature inversely proportional to its mass. This temperature is on the order of billionths of a kelvin for black holes of stellar mass, making it essentially impossible to observe.
             </p>
@@ -28,8 +28,8 @@ var articleOne={
             
             <p>
                 On 11 February 2016, the <i><b>LIGO</b></i> collaboration announced the first observation of gravitational waves; because these waves were generated from a black hole merger it was the first ever direct detection of a binary black hole merger. On 15 June 2016, a second detection of a gravitational wave event from colliding black holes was announced.
-            </p>`;
-    wiki: '<a href="https://en.wikipedia.org/wiki/Black_hole">';
+            </p>`,
+    wiki: '<a href="https://en.wikipedia.org/wiki/Black_hole">',
 };
 
 function createTemplate(data){
@@ -81,14 +81,6 @@ function createTemplate(data){
         </html>`;
         return htmlTemplate;
 }
-
-
-
-
-
-
-
-
 
 app.get('/article-one', function (req, res) {
   res.send(createTemplate(articleOne));
