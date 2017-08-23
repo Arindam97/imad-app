@@ -143,7 +143,7 @@ function createTemplate(data){
                 <hr/>
                 <div class="contain">
                     <p align="center" style="color: yellow">
-                        ${date}
+                        ${date.toDateString()}
                     </p>
                 <hr/>
                 <h3 align="center" style="color:#e90101;">
