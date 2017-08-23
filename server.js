@@ -173,7 +173,7 @@ function createTemplate(data){
 
 app.get('/articles/:articleName', function (req, res) {
     var articleName=req.params.articleName;
-    pool.query("SELECT * FROM article WHERE webTitle= '"+parseInt(req.params.articleName)+"'", function(err, result){
+    pool.query("SELECT * FROM article WHERE web= '"+parseInt(req.params.articleName)+"'", function(err, result){
         if(err){
             res.status(500).send(err.toString());
         }else{
