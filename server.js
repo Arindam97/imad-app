@@ -53,7 +53,7 @@ function hash(input,salt){
 }
 
 app.get('/hash/:input', function(req,res){
-    var hashedString= hash(input, 'salted-string-that-is-very-good-for-health');
+    var hashedString= hash(req.params.input, 'salted-string-that-is-very-good-for-health');
     res.send(hashedString);
 });
 
