@@ -43,7 +43,7 @@ var username= document.getElementById('username').value;
 var password= document.getElementById('password').value;
 console.log(username);
 console.log(password);
-request.setRequestHeader('Content-Type', 'application/json');
+request.setRequestHeader('Content-Type', 'application/json').open();
 request.open('POST', 'http://arindammaitra97a81.imad.hasura-app.io/login', true);
 request.send(JSON.stringify({username: username, password: password}));
 };
