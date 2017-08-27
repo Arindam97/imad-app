@@ -82,7 +82,8 @@ app.post('/login', function(req,res){
             res.status(500).send(err.toString());
         } else{
             if(results.rows.length===0){
-                res.status(403).send("USER NOT FOUND");
+                res.status(404);
+                alert("USER NOT FOUND");
             }else{
                 var dbString= result.rows[0].password;
                 var salt= dbString.split('$')[2];
