@@ -28,20 +28,12 @@ submit.onclick= function()
         {
             if (request.status===200)
             {
-                var names=request.responseText;
-                names= JSON.parse(names);
-                var list='';
-                for( var i=0; i<names.length; i++)
-                {
-                list +='<li>'+names[i]+'</li>';
-                }
-                var ul=document.getElementById('namelist');
-                ul.innerHTML = list;
+                
             }
         }
     };
-var nameIn= document.getElementById('nameID');
-var name=nameIn.value;
-request.open('GET', 'http://arindammaitra97a81.imad.hasura-app.io/submit-name?name='+ name, true);
+var username= document.getElementById('username').value;
+var password= document.getElementById('password').value;
+request.open('POST', 'http://arindammaitra97a81.imad.hasura-app.io/login', true);
 request.send(null);
 };
