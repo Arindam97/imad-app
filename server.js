@@ -73,6 +73,9 @@ app.post('/create-user', function(req,res){
    });
 });
 
+
+//login 
+
 app.post('/login', function(req,res){
     var username= req.body.username;
     var password= req.body.password;
@@ -97,7 +100,7 @@ app.post('/login', function(req,res){
    });
 });
 
-
+// end login
 
 
 function createTemplate(data){
