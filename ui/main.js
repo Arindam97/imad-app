@@ -28,12 +28,22 @@ submit.onclick= function()
         {
             if (request.status===200)
             {
-                
+                console.log("user logged in");
+                alert("USER LOGGED IN");
+            }else if(request.status===500){
+                alert("SOMETHING HAPPENED ON THE SERVER, WE ARE SORRY FOR THE INCONVINENCE");
+            }else if(request.status===403){
+                alert("WRONG PASSWORD FOR THE ENTERED USER");
+            }else if(request.status===404){
+                alert("USER NOT FOUND");
             }
         }
     };
 var username= document.getElementById('username').value;
 var password= document.getElementById('password').value;
+console.log(username);
+console.log(password);
+request.setRequestHeader('Content-Type', 'application/json');
 request.open('POST', 'http://arindammaitra97a81.imad.hasura-app.io/login', true);
-request.send(null);
+request.send(JSON.stringify({username: username, password: password}));
 };
