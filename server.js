@@ -82,7 +82,6 @@ app.post('/login', function(req,res){
         } else{
             if(results.rows.length===0){
                 res.status(404);
-                console.log((404).toString());
             }else{
                 var dbString= result.rows[0].password;
                 var salt= dbString.split('$')[2];
