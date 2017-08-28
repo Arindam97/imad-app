@@ -108,7 +108,7 @@ app.post('/login', function(req,res){
 
 // end login
 
-app.get('check-login', function(res,req){
+app.get('/check-login', function(res,req){
    if(req.session && req.session.auth & req.session.auth.userId){
        res.send("You are user number "+ req.session.auth.userId.toString());
    }
