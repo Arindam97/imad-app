@@ -99,7 +99,7 @@ app.post('/login', function(req,res){
                      req.session.auth={userId: result.rows[0].id};
                      res.send("USER SUCCESSFULLY VERIFIED");
                 }else{
-                    res.status(403)
+                    res.status(403);
                     }
             }
         }
