@@ -111,7 +111,7 @@ app.post('/login', function(req,res){
 // end login
 
 app.get('/check-login', function(req,res){
-   if(req.session && req.session.auth & req.session.auth.userId){
+   if(req.session && req.session.auth && req.session.auth.userId){
        res.send("You are user number "+ req.session.auth.userId.toString());
    }
    else{
