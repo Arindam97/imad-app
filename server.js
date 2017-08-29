@@ -100,8 +100,7 @@ app.post('/login', function(req,res){
                      req.session.auth={userId: result.rows[0].id};
                      res.send("USER SUCCESSFULLY VERIFIED");
                 }else{
-                    console.log("NANANANANANANA");
-                    res.status(403).send("WROG PASSWORD BITCH");
+                    res.status(403).send("WRONG PASSWORD");
                     }
             }
         }
@@ -118,6 +117,12 @@ app.get('/check-login', function(req,res){
        res.send("YOU ARE NOT LOGGED IN");
    }
 });
+
+app.get('/check-login', function(req,res){
+   delete  req.session.auth;
+   res.send("You are looged out");
+});
+
 
 function createTemplate(data){
     
