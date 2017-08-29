@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(session({
     secret: 'aRandomStringToProtectMyselfFromDangersLikeYou',
     cookie: {maxage: 1000*60*60*24*30},
-    auth
+    auth: ''
 }));
 
 app.get('/', function (req, res) {
