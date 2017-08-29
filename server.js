@@ -96,8 +96,8 @@ app.post('/login', function(req,res){
                 var hashedPassword= hash(password, salt);
                 if(hashedPassword === dbString)
                 {
-                    console.log(result.rows[0].id.toString());
                      req.session.auth={userId: result.rows[0].id};
+                     console.log(result.rows[0].id.toString());
                      res.send("USER SUCCESSFULLY VERIFIED");
                 }else{
                     console.log("NANANANANANANA");
