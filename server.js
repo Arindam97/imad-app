@@ -94,8 +94,6 @@ app.post('/login', function(req,res){
                 var dbString= result.rows[0].password;
                 var salt= dbString.split('$')[2];
                 var hashedPassword= hash(password, salt);
-                console.log(hashedPassword);
-                console.log(dbString);
                 if(hashedPassword === dbString)
                 {
                      req.session.auth={userId: result.rows[0].id};
@@ -112,9 +110,9 @@ app.post('/login', function(req,res){
 // end login
 
 app.get('/check-login', function(req,res){
-    res.send(req.session.toString());
-    res.send(req.session.auth.toString());
-    res.send(req.session.auth.userId.toString());
+    console.log(req.session.toString());
+    console.log(req.session.auth.toString());
+    console.log(req.session.auth.userId.toString());
    if(req.session && req.session.auth & req.session.auth.userId){
        res.send("You are user number "+ req.session.auth.userId.toString());
    }
