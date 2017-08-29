@@ -89,7 +89,7 @@ app.post('/login', function(req,res){
             res.status(500).send(err.toString());
         } else{
             if(result.rows.length===0){
-                res.status(404);
+                res.status(404).send("USENAME IS INVALID");
             }else{
                 var dbString= result.rows[0].password;
                 var salt= dbString.split('$')[2];
@@ -102,7 +102,7 @@ app.post('/login', function(req,res){
                      res.send("USER SUCCESSFULLY VERIFIED");
                 }else{
                     console.log("NANANANANANANA");
-                    res.status(403);
+                    res.status(403).send("WROG PASSWORD BITCH");
                     }
             }
         }
