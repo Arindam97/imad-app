@@ -96,6 +96,7 @@ app.post('/login', function(req,res){
                 var hashedPassword= hash(password, salt);
                 if(hashedPassword === dbString)
                 {
+                    console.log(result.rows[0].id.toString());
                      req.session.auth={userId: result.rows[0].id};
                      res.send("USER SUCCESSFULLY VERIFIED");
                 }else{
@@ -110,9 +111,6 @@ app.post('/login', function(req,res){
 // end login
 
 app.get('/check-login', function(req,res){
-    console.log(req.session.stringify());
-    console.log(req.session.auth.stringify());
-    console.log(req.session.auth.userId.stringify());
    if(req.session && req.session.auth & req.session.auth.userId){
        res.send("You are user number "+ req.session.auth.userId.toString());
    }
